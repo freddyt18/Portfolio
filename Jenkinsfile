@@ -8,8 +8,8 @@ pipeline {
             steps {
                 sh '''
                     cd ~/personal/ && \\
-                    rm -rf devops-assignment && \\
-                    git clone https://github.com/freddyt18/devops-assignment.git
+                    sudo rm -rf devops-assignment && \\
+                    sudo git clone https://github.com/freddyt18/devops-assignment.git
                 '''
             }
         }
