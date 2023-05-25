@@ -8,7 +8,7 @@
 
     /* Color */
         /* Main Color */
-        --hue-color: 80;
+        --hue-color: 30;
 
         /* HSL color */
         --first-color: hsl(var(--hue-color), 69%, 61%);
