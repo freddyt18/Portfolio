@@ -12,6 +12,7 @@ pipeline {
                     cd ~/tmp/ && \\
                     sudo git clone https://github.com/freddyt18/devops-assignment.git && \\
                     cd devops-assignment&& \\
+                    sudo git branch -M master && \\
                     sudo git pull origin master
                 '''
             }
