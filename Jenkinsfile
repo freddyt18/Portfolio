@@ -8,6 +8,7 @@ pipeline {
             steps {
                 sh '''
                     cd ~/personal/ && \\
+                    rm -rf devops-assignment && \\
                     git clone https://github.com/freddyt18/devops-assignment.git
                 '''
             }
