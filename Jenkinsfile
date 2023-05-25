@@ -4,7 +4,7 @@ pipeline {
     }
 
     stages {
-        stages('Cloning Ansible Playbook'){
+        stages('Cloning Ansible Playbook') {
             steps {
                 sh '''
                     cd ~/personal/ && \\
@@ -13,7 +13,7 @@ pipeline {
             }
         }
 
-        stage('Alerting Telegram'){
+        stage('Alerting Telegram') {
             steps {
                 sh """
                     cd ~/personal/devops-assignment && \\
@@ -22,7 +22,7 @@ pipeline {
             }
         }
 
-        stage('Building Docker Image and Pushing to Docker Hub'){
+        stage('Building Docker Image and Pushing to Docker Hub') {
             steps {
                 sh '''
                     cd ~/personal/devops-assignment && \\
@@ -31,7 +31,7 @@ pipeline {
             }
         }
 
-        stage('Applying k8s manifest'){
+        stage('Applying k8s manifest') {
             steps {
                 sh '''
                     cd ~/personal/devops-assignment && \\
