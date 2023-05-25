@@ -10,6 +10,7 @@ pipeline {
                     cd ~/personal/ && \\
                     sudo rm -rf devops-assignment && \\
                     sudo git clone https://github.com/freddyt18/devops-assignment.git && \\
+                    cd devops-assignment&& \\
                     sudo git pull origin master
                 
                 '''
