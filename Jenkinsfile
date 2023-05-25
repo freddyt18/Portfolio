@@ -21,7 +21,7 @@ pipeline {
         stage('Alerting Telegram') {
             steps {
                 sh """
-                    cd ~/personal/devops-assignment/Ansible && \\
+                    cd ~/tmp/devops-assignment/Ansible && \\
                     ansible-playbook playbooks/portfolio/00_alert.yml -e "telegram_token=${telegram_token}" -vvv
                 """
             }
@@ -30,7 +30,7 @@ pipeline {
         stage('Building Docker Image and Pushing to Docker Hub') {
             steps {
                 sh '''
-                    cd ~/personal/devops-assignment/Ansible && \\
+                    cd ~/tmp/devops-assignment/Ansible && \\
                     ansible-playbook playbooks/portfolio/01_docker_hub.yml -vvv
                 '''
             }
@@ -39,7 +39,7 @@ pipeline {
         stage('Applying k8s manifest') {
             steps {
                 sh '''
-                    cd ~/personal/devops-assignment/Ansible && \\
+                    cd ~/tmp/devops-assignment/Ansible && \\
                     ansible-playbook playbooks/portfolio/02_k8s.yml -vvv
                 '''
             }
