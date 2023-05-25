@@ -4,7 +4,7 @@ pipeline {
     }
 
     stages {
-        stages('Cloning Ansible Playbook') {
+        stage('Cloning Ansible Playbook') {
             steps {
                 sh '''
                     cd ~/personal/ && \\
