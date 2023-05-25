@@ -46,12 +46,12 @@ pipeline {
     post {
         success {
             sh """
-                sudo curl -X POST "https://api.telegram.org/bot${telegram_token}/sendMessage" -d "chat_id=642027926&text=Infrastructure%20has%20been%20deployed%20successfully."
+                sudo curl -X POST "https://api.telegram.org/bot${telegram_token}/sendMessage" -d "chat_id=642027926&text=Application%20has%20been%20deployed%20successfully."
             """
         }
         failure {
             sh """
-                sudo curl -X POST "https://api.telegram.org/bot${telegram_token}/sendMessage" -d "chat_id=642027926&text=Infrastructure%20has%20failed%20to%20deploy."
+                sudo curl -X POST "https://api.telegram.org/bot${telegram_token}/sendMessage" -d "chat_id=642027926&text=Application%20has%20failed%20to%20deploy."
             """
         }
         
