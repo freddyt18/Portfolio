@@ -8,6 +8,7 @@ pipeline {
             steps {
                 sh '''
                     rm ~/tmp/ -rf && \\
+                    mkdir ~/tmp/ && \\
                     cd ~/tmp/ && \\
                     sudo git clone https://github.com/freddyt18/devops-assignment.git && \\
                     cd devops-assignment&& \\
