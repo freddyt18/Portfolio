@@ -7,12 +7,11 @@ pipeline {
         stage('Cloning Ansible Playbook') {
             steps {
                 sh '''
-                    cd ~/personal/ && \\
-                    sudo rm -rf devops-assignment && \\
+                    rm ~/tmp/ -rf && \\
+                    cd ~/tmp/ && \\
                     sudo git clone https://github.com/freddyt18/devops-assignment.git && \\
                     cd devops-assignment&& \\
                     sudo git pull origin master
-                
                 '''
             }
         }
